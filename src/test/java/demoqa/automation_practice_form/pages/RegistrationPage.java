@@ -1,14 +1,15 @@
 package demoqa.automation_practice_form.pages;
 
 
-
 import com.codeborne.selenide.SelenideElement;
-
 import demoqa.automation_practice_form.components.CalendarForm;
 
 import java.io.File;
+import java.util.Iterator;
+import java.util.Map;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -117,5 +118,24 @@ public class RegistrationPage {
         );
         return this;
     }
+
+    public RegistrationPage checkFormWithMap(Map<String, String> value) {
+        Iterator it = value.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            $(".table-responsive").$(byText((String) pair.getKey())).sibling(0).shouldHave(text((String) pair.getValue()));
+        }
+        return this;
+    }
+
+    public static Map<String, String> valuesToCheck = Map.of(
+            "Student Name", name + " " + surname,
+            "Student Email", mail,
+            "Gender", "Male",
+            "Mobile", phone,
+            "Date of Birth", "15 September,1987",
+            "Picture", "terminator.jpg",
+            "Address", address,
+            "State and City", stateOfCountry + " " + cityOfState);
 
 }

@@ -3,6 +3,7 @@ package demoqa.automation_practice_form.tests;
 import demoqa.automation_practice_form.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
+import static demoqa.automation_practice_form.pages.RegistrationPage.valuesToCheck;
 import static demoqa.automation_practice_form.tests.TestData.*;
 
 
@@ -27,7 +28,7 @@ public class CheckFormTest extends TestBase {
                 .setState(stateOfCountry)
                 .setCity(cityOfState)
                 .submitPage()
-                .checkForm();
+                .checkFormWithMap(valuesToCheck);
     }
 
 }
