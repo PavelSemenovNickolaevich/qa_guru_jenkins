@@ -22,7 +22,6 @@ public class TestBase {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        registrationPage.openPage();
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
     }
 }

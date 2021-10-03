@@ -33,8 +33,9 @@ public class RegistrationPage {
             city = $("#city"),
             submit = $("#submit");
 
-    public void openPage() {
+    public RegistrationPage openPage() {
         open("https://demoqa.com/automation-practice-form");
+        return this;
     }
 
     public RegistrationPage typeFirstName(String name) {

@@ -13,7 +13,8 @@ public class CheckFormTest extends TestBase {
     @Test
     void shouldSaveCheckRegistrationForm() {
 
-        registrationPage.typeFirstName(name)
+        registrationPage.openPage()
+                .typeFirstName(name)
                 .typeLastName(surname)
                 .setEmail(mail)
                 .setRadioButtonMale()
