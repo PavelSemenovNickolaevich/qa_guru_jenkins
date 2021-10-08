@@ -29,6 +29,7 @@ dependencies {
             "org.assertj:assertj-core:3.19.0",
             "com.codeborne:pdf-test:1.6.1",
             "com.codeborne:xls-test:1.4.3",
+            "org.aeonbits.owner:owner:1.0.12",
             "com.opencsv:opencsv:5.3")
     implementation group: 'net.lingala.zip4j', name: 'zip4j', version: '2.9.0'
     // implementation group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.24'
