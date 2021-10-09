@@ -31,7 +31,8 @@ public class TestBase {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        Configuration.remote = format("https://%s:%s@selenoid.autotests.cloud/wd/hub/", loginForSelenoid, passwordForSelenoid);
+     //   Configuration.remote = format("https://%s:%s@selenoid.autotests.cloud/wd/hub/", loginForSelenoid, passwordForSelenoid);
+        Configuration.remote = format("https://%s:%s@%s", loginForSelenoid, passwordForSelenoid, System.getProperty("remoteUrl"));
     }
 
     @AfterEach
