@@ -10,7 +10,7 @@
       "messenger": "telegram",
       "allureFolder": "allure-report/",
       "allureLinkPath": "allure",
-      "chart": false,
+      "chart": true,
       "chartName": "",
       "project": ""
     },
